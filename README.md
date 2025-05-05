@@ -40,7 +40,7 @@ This is a fully functional full-stack eCommerce web application built as a perso
 ### 🛒 Cart Page
 ![Cart Page](./screenshots/cart.png)
 
-### 🔐 Login Page
+### 🔐 About Page
 ![About Page](./screenshots/about.png)
 
 ### 📦 Admin Dashboard

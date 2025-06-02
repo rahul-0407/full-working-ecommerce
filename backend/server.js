@@ -14,7 +14,7 @@ connectDB()
 connectCloudinary()
 
 
-const allowedOrigins = ['https://full-working-ecommerce-wb3b.vercel.app', 'https://full-working-ecommerce-jqoc.vercel.app/'];
+const allowedOrigins = ['https://full-working-ecommerce-wb3b.vercel.app', 'https://full-working-ecommerce-jqoc.vercel.app'];
 
 //middleware
 app.use(express.json())

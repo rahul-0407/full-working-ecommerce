@@ -6,7 +6,7 @@ import ProductItem from '../components/ProductItem';
 
 const Collection = () => {
 
-  const {products, search, showSearch} = useContext(ShopContext)
+  const {products, search, showSearch, loading} = useContext(ShopContext)
   const [showFilter, setShowFilter] = useState(false);
   const[filterProducts,setFilterProducts] = useState([]);
   const[category,setCategory] = useState([]);
@@ -65,9 +65,10 @@ const Collection = () => {
   }
 
 
+
   useEffect(()=>{
     applyFilter();
-  },[category,subCategory,search,showSearch])
+  },[category,subCategory,search,showSearch,products])
 
 
   useEffect(()=>{

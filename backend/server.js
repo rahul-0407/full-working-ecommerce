@@ -17,7 +17,7 @@ connectCloudinary()
 //middleware
 app.use(express.json())
 app.use(cors({
-    origin:"https://full-working-ecommerce-wb3b.vercel.app/",
+    origin:"https://full-working-ecommerce-wb3b.vercel.app",
     credentials:true
 }))
  

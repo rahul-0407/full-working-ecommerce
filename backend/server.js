@@ -14,13 +14,23 @@ connectDB()
 connectCloudinary()
 
 
+const allowedOrigins = ['https://full-working-ecommerce-wb3b.vercel.app', 'https://full-working-ecommerce-jqoc.vercel.app/'];
+
 //middleware
 app.use(express.json())
 app.use(cors({
-    origin:"https://full-working-ecommerce-wb3b.vercel.app",
-    credentials:true
-}))
- 
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps, curl, etc.)
+      if (!origin) return callback(null, true);
+  
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true
+  }));
 
 
 
